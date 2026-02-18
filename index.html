@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Y2K Marketplace OS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/tahoma');
+        
+        body { 
+            margin: 0; 
+            overflow: hidden; 
+            background-color: #008080; 
+            font-family: 'Tahoma', sans-serif; 
+            user-select: none;
+        }
+
+        /* Das berühmte XP Bliss Wallpaper Feeling */
+        .pixel-bliss {
+            background: radial-gradient(circle at 50% 120%, #229954 0%, #229954 40%, transparent 40.5%),
+                        linear-gradient(to bottom, #2E86C1 0%, #5DADE2 60%, #AED6F1 100%);
+            background-size: 100% 100%;
+            position: relative;
+        }
+
+        .pixel-bliss::before {
+            content: ""; position: absolute; inset: 0;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 30px 30px; pointer-events: none; z-index: 1;
+        }
+
+        .chrome-text {
+            background: linear-gradient(180deg, #fff 0%, #a1a1a1 45%, #444 50%, #888 55%, #fff 100%);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            filter: drop-shadow(2px 2px 0px rgba(0,0,0,0.8));
+        }
+
+        .win-border { 
+            border-top: 2px solid #ffffff; 
+            border-left: 2px solid #ffffff; 
+            border-bottom: 2px solid #404040; 
+            border-right: 2px solid #404040; 
+            box-shadow: 1px 1px 0px black;
+        }
+
+        .win-border-inset { 
+            border-top: 2px solid #404040; 
+            border-left: 2px solid #404040; 
+            border-bottom: 2px solid #ffffff; 
+            border-right: 2px solid #ffffff; 
+        }
+
+        .glossy-header {
+            background: linear-gradient(to bottom, #0058e4 0%, #3b91ff 5%, #0058e4 45%, #0046b4 100%);
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+            border-bottom: 1px solid #003090;
+        }
+
+        .xp-button {
+            background: linear-gradient(to bottom, #f0f0f0 0%, #e0e0e0 50%, #d0d0d0 100%);
+            border-radius: 3px;
+            border: 1px solid #707070;
+            box-shadow: inset 1px 1px 1px white, 1px 1px 1px black;
+        }
+
+        .xp-button:active {
+            background: #d0d0d0;
+            box-shadow: inset 2px 2px 3px rgba(0,0,0,0.2);
+            transform: translate(1px, 1px);
+        }
+
+        .scanlines::after {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; bottom: 0; right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.05) 50%);
+            background-size: 100% 4px;
+            pointer-events: none;
+            z-index: 1000;
+        }
+
+        .start-menu-gradient {
+            background: linear-gradient(to right, #1e4baf 0%, #2e66d8 100%);
+        }
+
+        /* Scrollbar für das echte Retro-Gefühl */
+        ::-webkit-scrollbar { width: 16px; height: 16px; background: #dfdfdf; }
+        ::-webkit-scrollbar-thumb { background: #c0c0c0; border: 2px solid #ffffff; border-right-color: #404040; border-bottom-color: #404040; box-shadow: inset 1px 1px 0 black; }
+        ::-webkit-scrollbar-button { background: #c0c0c0; border: 2px solid #ffffff; border-right-color: #404040; border-bottom-color: #404040; width: 16px; height: 16px; display: block; }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.574.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.41.0",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "vite": "https://esm.sh/vite@^7.3.1",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.4"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="scanlines">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>

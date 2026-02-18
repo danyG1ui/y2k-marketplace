@@ -1,0 +1,8 @@
+{
+  "name": "Y2K Chrome Marketplace OS v2",
+  "description": "An enhanced retro-futuristic marketplace and OS environment with AI image generation and functional shell components.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
